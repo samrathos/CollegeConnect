@@ -5,6 +5,145 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile Creation - CollegeConnect</title>
     <style>
+        body {
+            background-color: #E9F5F2;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #1A3C40;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        /* Header Styles */
+        #box {
+            height: 85px;
+            background-color: #2A9D8F;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 40px;
+        }
+
+        #logo h1 {
+            color: #E9F5F2;
+            font-size: 28px;
+            margin: 0;
+        }
+
+        #navdiv {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        #navdiv a, .dropdown button, #gs {
+            color: #E9F5F2;
+            font-weight: bold;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;text-decoration: none;
+        }
+
+        #gs {
+            border-radius: 10px;
+            padding: 8px 16px;
+            background-color: #264653;
+            transition: background-color 0.3s ease;
+        }
+
+         #navdiv a:hover, .dropdown button:hover {
+            color: #F4A261;
+        }
+        #gs:hover{background-color: #F4A261;}
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: #2A9D8F;
+            border-radius: 10px;
+            padding: 10px;
+            min-width: 150px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+        }
+
+        .dropdown-content a {
+            color: #E9F5F2;
+            display: block;
+            padding: 8px;
+            font-weight: bold;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+       
+
+        /* Profile Creation Styles */
+        .profile-container {
+            padding: 40px 20px;
+            max-width: 600px;
+            margin-left: auto; margin-right: auto; margin-top: 90px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .profile-container h2 {
+            text-align: center;
+            color: #2A9D8F;
+            margin-bottom: 20px;
+        }
+
+        .profile-container label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+
+        .profile-container input[type="text"],
+        .profile-container input[type="email"],
+        .profile-container input[type="number"],
+        .profile-container select {
+            width: 90%;
+            padding: 10px;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .profile-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #2A9D8F;
+            color: #E9F5F2;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .profile-container button:hover {
+            background-color: #F4A261;
+        }
+        #footer {
+            background-color: #2A9D8F;
+            color: #E9F5F2;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;margin-top: 10px;
+        }
+
+        #footer div {
+            margin: 5px 0;
+        }
         @media (max-width: 600px){
       body {
             background-color: #E9F5F2;
