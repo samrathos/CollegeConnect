@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CollegeConnect</title>
+    <style>
+        /* General Styles */
+        body {
+            background-color: #E9F5F2;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #1A3C40;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        /* Header Styles */
+        #box {
+            height: 85px;
+            background-color: #2A9D8F;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 40px;
+        }
+
+        #logo h1 {
+            color: #E9F5F2;
+            font-size: 28px;
+            margin: 0;
+        }
+
+        #navdiv {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        #navdiv a, .dropdown button, #gs {
+            color: #E9F5F2;
+            font-weight: bold;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;text-decoration: none;
+        }
+
+        #gs {
+            border-radius: 10px;
+            padding: 8px 16px;
+            background-color: #264653;
+            transition: background-color 0.3s ease;
+        }
+
+         #navdiv a:hover, .dropdown button:hover {
+            color: #F4A261;
+        }
+        #gs:hover{background-color: #F4A261;}
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: #2A9D8F;
+            border-radius: 10px;
+            padding: 10px;
+            min-width: 150px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+        }
+
+        .dropdown-content a {
+            color: #E9F5F2;
+            display: block;
+            padding: 8px;
+            font-weight: bold;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Intro Section */
+        #intro1 {
+            background-image: url(bg.webp);
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: overlay;
+            background-color: rgba(233, 245, 242, 0.8);
+            text-align: center;
+            padding: 60px 20px;
+            color: #1A3C40;
+        }
+        #intro{border-radius:10px ;width: 600px;
+            background-color: rgb(148, 196, 196);
+            margin-left: 430px;padding-bottom: 30px;padding-top: 10px;}
+        #intro h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        #intro p {
+            font-size: 18px;
+            max-width: 600px;
+            margin: 10px auto;
+        }
+
+        .intro-button {
+            border-radius: 10px;
+            color: #E9F5F2;
+            height: 40px;
+            width: 120px;
+            background-color: #264653;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .intro-button:hover {
+            background-color: #F4A261;
+        }
+
+        /* Sections */
+        .section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .section h3 {
+            font-size: 28px;
+            color: #2A9D8F;
+            margin-bottom: 20px;
+        }
+
+        .section p {
+            font-size: 18px;
+            color: #1A3C40;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .how-it-works, .top-colleges {
+            background-color: #E9F5F2;
+        }
+
+        /* Cards for Top Colleges */
+        .college-cards {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .college-card {
+            background-color: #2A9D8F;
+            color: #E9F5F2;
+            border-radius: 10px;
+            width: 200px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .college-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .college-card h4 {
+            margin: 0 0 10px 0;
+            font-size: 20px;
+        }
+
+        .college-card p {
+            font-size: 14px;
+            margin: 0;
+        }
+        #footer {
+            background-color: #2A9D8F;
+            color: #E9F5F2;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        #footer div {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div id="logo">
+            <h1>College<span id="h12">Connect</span></h1>
+        </div>
+        <div id="navdiv">
+            <a href="index.html">Home</a>
+            <a href="#footer">Contact</a>
+            <a href="cfinder.html">College Finder</a>
+            <a href="pc.html"><button id="gs">Sign Up</button></a>
+            <div class="dropdown">
+                <button>Menu</button>
+                <div class="dropdown-content">
+                    <a href="#profile">Profile</a>
+                    <a href="#connections">Connections</a>
+                    <a href="#settings">Settings</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="intro1">
+        <div id="intro">
+        <h2>Welcome to CollegeConnect</h2>
+        <p>Your one-stop platform to connect directly with colleges based on personalized eligibility criteria, saving time, effort, and cost. Let’s make your journey to higher education smoother and more accessible.</p>
+        <a href="pc.html"><button class="intro-button">Get Started</button></a>
+        </div>
+    </div>
+
+    <!-- How It Works Section -->
+    <div class="section how-it-works">
+        <h3>How It Works</h3>
+        <p>CollegeConnect simplifies your path to higher education by connecting you directly with colleges. By answering a few questions about your academic background and goals, we can match you to the best-fit colleges for your needs and facilitate easy communication with their admissions teams.</p>
+    </div>
+
+    <!-- Top Colleges Section -->
+    <div class="section top-colleges">
+        <h3>Top Colleges on Our Platform</h3>
+        <div class="college-cards">
+            <div class="college-card">
+                <h4>Harvard University</h4>
+                <p>Prestigious programs in law, business, and more</p>
+            </div>
+            <div class="college-card">
+                <h4>Stanford University</h4>
+                <p>World-renowned for tech and entrepreneurship</p>
+            </div>
+            <div class="college-card">
+                <h4>MIT</h4>
+                <p>Leader in science, technology, and engineering</p>
+            </div>
+            <div class="college-card">
+                <h4>UC Berkeley</h4>
+                <p>Top-ranked programs in various disciplines</p>
+            </div>
+            <div class="college-card">
+                <h4>Oxford University</h4>
+                <p>Historic and influential in global education</p>
+            </div>
+        </div>
+    </div>
+    <footer id="footer">
+        <div>Email us: helpdesk@collegeconnect.in</div>
+        <div>Phone: +91 9999999999</div>
+    </footer>
+</body>
+</html>
