@@ -204,36 +204,47 @@
             width: 180px;
             border-radius: 10px;margin-bottom: 10px;
         }
-        @media (max-width: 600px) and (orientation: portrait){
+        
             @media (max-width: 600px) {
-    #box {
-        flex-direction: column;
-        padding: 20px;
-        text-align: center;
-    }
-
+                @media (max-width: 600px) {
+    /* Center-align navigation items */
     #navdiv {
+        display: flex;
         flex-direction: column;
-        gap: 10px;
+        align-items: center;
+        gap: 12px;
     }
 
-    #filter-section {
-        padding: 20px;
+    /* Reduce font size of headings and buttons */
+    h1, h2, .button, #navdiv a {
+        font-size: 1.2em;
     }
 
-    .filter {
-        flex-direction: column;
-        gap: 15px;
-        width: 100%;
-    }
-
-    .college-card {
-        width: 90%;
+    /* Adjust button layout */
+    .button, .btn-signup {
+        padding: 10px 20px;
         margin: 10px auto;
     }
 
-    .fee-range {
-        width: 100%;
+    /* Set a max-width for form inputs to keep them from stretching */
+    input, select {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    /* Align and center elements in the filter section */
+    #filter-section {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Center-align the results section */
+    .college-card {
+        width: 90%;
+        margin: 20px auto;
     }
 }
     </style>
